@@ -1,31 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
+import './index.css';
 import {CadastraUsuario} from './Usuario';
 import {CadastraFornecedor} from './Fornecedor';
 import {CadastraPerfil} from './Perfil';
 import {RelatorioAcomponhamento} from './Relatorio';
-
-import {Router,Route,BrowserHistory} from 'react-router';
-import * as serviceWorker from './serviceWorker';
-
+import {ListarUsuario} from './Usuario';
+import {Router,Route,browserHistory} from 'react-router';
+ 
 ReactDOM.render(
-    (
-        <Router history={BrowserHistory} >
-            <Route path="/" componente = {App}/>
-            <Route path="/usuario" componente = {CadastraUsuario}/>            
-            <Route path="/fornecedor" componente = {CadastraFornecedor}/>   
-            <Route path="/perfil" componente = {CadastraPerfil}/>   
-            <Route path="/relatorio" componente = {RelatorioAcomponhamento}/>               
-        </Router>
-    ),
+    (<Router history={browserHistory}>
+        <Route path="/" component = {App}>
+            <Route path="/ListarUsuario" component = {ListarUsuario}/>            
+            <Route path="/CadastrarUsuario" component = {CadastraUsuario}/>            
+            <Route path="/fornecedor" component = {CadastraFornecedor}/>   
+            <Route path="/perfil" component = {CadastraPerfil}/>   
+            <Route path="/relatorio" component = {RelatorioAcomponhamento}/>  
+        </Route>             
+    </Router>),
     document.getElementById('root')
-
-
 );
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
