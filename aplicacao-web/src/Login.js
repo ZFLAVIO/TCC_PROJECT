@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react';
 import logo from './logo.png';
 import './App.css';
 import './bootstrap.min.css';
 
-function App() {
-  return (
+export class Login extends Component{
+  render() {
+   return (
     <div className="container">
     <div className="row">
       <div className="col-sm-9 col-md-7 col-lg-5 mx-auto">
@@ -39,5 +40,5 @@ function App() {
   
   );
 }
-
-export default App;
+}
+ 

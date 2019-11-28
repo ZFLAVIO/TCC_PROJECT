@@ -8,6 +8,7 @@ import {CadastraUsuario} from './Usuario';
 import {CadastraFornecedor} from './Fornecedor';
 import {CadastraPerfil} from './Perfil';
 import {RelatorioAcomponhamento} from './Relatorio';
+import {ListarPerfil} from './Relatorio';
 import Router from 'react-router/es/Router';
   
 class App extends Component{
@@ -22,12 +23,21 @@ class App extends Component{
               </button>
                <img src={logo} classNameName="ml-3" alt="..."></img>
             
-              <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
-               
-               
-               
-              </div>
+               <div className="collapse navbar-collapse" id="navbarResponsive">
+                  <ul className="navbar-nav ml-auto">
+                  <li className="nav-item active">
+                      <a className="nav-link" href="/">Home
+                        <span className="sr-only">(current)</span>
+                      </a>
+                    </li>
+                    <li className="nav-item">
+                      <a className="nav-link" href="/login">Logout</a>
+                    </li>
+                  </ul>
+                </div>
+             
             </nav>
+           
             </div>
           </div>
           <div className="row">
@@ -37,7 +47,7 @@ class App extends Component{
               <div class="col-3">
                 <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                   <Link class="nav-link " id="v-pills-home-tab" data-toggle="pill" to="/ListarUsuario">Listar_usuario</Link>
-                  <Link class="nav-link " id="v-pills-profile-tab" data-toggle="pill" to="/perfil">Cadastrar_Perfil</Link>
+                  <Link class="nav-link " id="v-pills-profile-tab" data-toggle="pill" to="/ListarPerfil">Listar_Perfil</Link>
                   <Link class="nav-link" id="v-pills-messages-tab" data-toggle="pill" to="/fornecedor">Cadastrar_Fonecedor</Link>
                   <Link class="nav-link " id="v-pills-settings-tab" data-toggle="pill" to="/relatorio">Relatorio</Link>
                 </div>
@@ -45,7 +55,9 @@ class App extends Component{
              </div>
             </div>
             <div className="col-sm-10">
-              {this.props.children}
+              
+              {this.props.children} 
+              
             </div>
           </div>
       </div>  
