@@ -29,9 +29,9 @@ export class ListarUsuario extends Component{
         </thead>
         <tbody>
           <tr>
-             <td scope="row">
+             <th scope="row">
               <input type="checkbox" id="scales" name="scales"></input>
-            </td>
+            </th>
             <td>Kaique Erick Figueiredo</td>
             <td>Jose@gmail.com</td>
             <td>Avenida Sérgio Gama </td>
@@ -44,9 +44,9 @@ export class ListarUsuario extends Component{
           </tr>
           <tr>
 
-            <td scope="row">
+            <th scope="row">
               <input type="checkbox" id="scales" name="scales"></input>
-            </td>
+            </th>
             <td> Erick da silva</td>
             <td>DaSilva@gmail.com</td>
             <td>Avenida Gama  </td>

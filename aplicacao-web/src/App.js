@@ -4,13 +4,13 @@ import logo from './logo.png';
 import './App.css';
 import './bootstrap.min.css';
 import {Link} from 'react-router';
+{/*
 import {CadastraUsuario} from './Usuario';
 import {CadastraFornecedor} from './Fornecedor';
 import {CadastraPerfil} from './Perfil';
 import {RelatorioAcomponhamento} from './Relatorio';
 import {ListarPerfil} from './Relatorio';
-import Router from 'react-router/es/Router';
-  
+   */}
 class App extends Component{
  render() {
   return (

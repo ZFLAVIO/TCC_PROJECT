@@ -1,44 +1,53 @@
 import React, { Component } from 'react';
+import {browserHistory} from  'react-router';
 import logo from './logo.png';
-import './App.css';
-import './bootstrap.min.css';
+import './login.css';
+export class Login extends Component {
 
-export class Login extends Component{
-  render() {
-   return (
-    <div className="container">
-    <div className="row">
-      <div className="col-sm-9 col-md-7 col-lg-5 mx-auto">
-        <div className="card card-signin my-5">
-          <div className="card-body">
-          <img src={logo} classNameName="ml-3" alt="..."></img>
-            <h5 className="card-title text-center"><b>Login</b></h5>
-            <form className="form-signin">
-              <div className="form-label-group">
-                <input type="email" id="inputEmail" className="form-control" placeholder="Email address" required autofocus></input>
-                <label for="inputEmail">Email address</label>
-              </div>
+    constructor(props){
+        super(props);        
+        this.state = {msg:this.props.location.query.msg};
+    }
 
-              <div className="form-label-group">
-                <input type="password" id="inputPassword" className="form-control" placeholder="Password" required></input>
-                <label for="inputPassword">Password</label>
-              </div>
+    envia(event){
+     
+      event.preventDefault();
+        const requestInfo = {
+            method:'POST',
+            body:JSON.stringify({email:this.email.value,senha:this.senha.value}),
+            headers:new Headers({
+                'Content-type' : 'application/json'
+            })
+        };
 
-              <div className="custom-control custom-checkbox mb-3">
-                <input type="checkbox" className="custom-control-input" id="customCheck1"></input>
-                <label className="custom-control-label" for="customCheck1">Remember password</label>
-              </div>
-              <button className="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in</button>
-              <hr className="my-4"></hr>
-             </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-   
-  
-  );
+        fetch('http://localhost:8080/auth',requestInfo)
+            .then(response => {
+                if(response.ok) {
+                    return response.text();
+                } else {
+                    throw new Error('não foi possível fazer o login');
+                }
+            })
+            .then(token => {
+                localStorage.setItem('auth-token',token);
+                browserHistory.push('/timeline');
+            })
+            .catch(error => {
+                this.setState({msg:error.message});
+            });
+    }
+
+    render(){
+        return (
+            <div className="login-box">
+                <img src={logo} classNameName="ml-3" alt="..."></img>
+                 <h1>{this.state.msg}</h1>
+                <form onSubmit={this.envia.bind(this)}>
+                    <input type="text" ref={(input) => this.email = input}/>
+                    <input type="password" ref={(input) => this.senha = input}/>
+                    <input type="submit" value="login"/>
+                </form>
+            </div>
+        );
+    }
 }
-}
- 

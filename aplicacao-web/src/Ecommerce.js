@@ -19,18 +19,18 @@ export class Ecommerce extends Component{
                 <div className="collapse navbar-collapse" id="navbarResponsive">
                   <ul className="navbar-nav ml-auto">
                     <li className="nav-item active">
-                      <a className="nav-link" href="#">Home
+                      <Link className="nav-link" to="#">Home
                         <span className="sr-only">(current)</span>
-                      </a>
+                      </Link>
                     </li>
                     <li className="nav-item">
-                      <a className="nav-link" href="#">Sobre</a>
+                      <Link className="nav-link" to="#">Sobre</Link>
                     </li>
                     <li className="nav-item">
-                      <a className="nav-link" href="#">Serviços</a>
+                      <Link className="nav-link" to="#">Serviços</Link>
                     </li>
                     <li className="nav-item">
-                      <a className="nav-link" href="/logado">Administrador</a>
+                      <Link className="nav-link" to="/logado">Administrador</Link>
                     </li>
                   </ul>
                 </div>
@@ -44,9 +44,9 @@ export class Ecommerce extends Component{
 
            <br></br>     
          <div className="list-group">
-           <a href="#" className="list-group-item">Category 1</a>
-           <a href="#" className="list-group-item">Category 2</a>
-           <a href="#" className="list-group-item">Category 3</a>
+           <Link to="#" className="list-group-item">Category 1</Link>
+           <Link to="#" className="list-group-item">Category 2</Link>
+           <Link to="#" className="list-group-item">Category 3</Link>
          </div>
  
        </div>
@@ -71,24 +71,24 @@ export class Ecommerce extends Component{
                <img className="d-block img-fluid" src="http://placehold.it/900x350" alt="Third slide"></img>
              </div>
            </div>
-           <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+           <Link className="carousel-control-prev" to="#carouselExampleIndicators" role="button" data-slide="prev">
              <span className="carousel-control-prev-icon" aria-hidden="true"></span>
              <span className="sr-only">Previous</span>
-           </a>
-           <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+           </Link>
+           <Link className="carousel-control-next" to="#carouselExampleIndicators" role="button" data-slide="next">
              <span className="carousel-control-next-icon" aria-hidden="true"></span>
              <span className="sr-only">Next</span>
-           </a>
+           </Link>
          </div>
  
          <div className="row">
  
            <div className="col-lg-4 col-md-6 mb-4">
              <div className="card h-100">
-               <a href="#"><img className="card-img-top" src="http://placehold.it/700x400" alt=""></img> </a>
+               <Link to="#"><img className="card-img-top" src="http://placehold.it/700x400" alt=""></img> </Link>
                <div className="card-body">
                  <h4 className="card-title">
-                   <a href="#">Item One</a>
+                   <Link to="#">Item One</Link>
                  </h4>
                  <h5>$24.99</h5>
                  <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
@@ -101,10 +101,10 @@ export class Ecommerce extends Component{
  
            <div className="col-lg-4 col-md-6 mb-4">
              <div className="card h-100">
-               <a href="#"><img className="card-img-top" src="http://placehold.it/700x400" alt=""></img></a>
+               <Link to="#"><img className="card-img-top" src="http://placehold.it/700x400" alt=""></img></Link>
                <div className="card-body">
                  <h4 className="card-title">
-                   <a href="#">Item Two</a>
+                   <Link to="#">Item Two</Link>
                  </h4>
                  <h5>$24.99</h5>
                  <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
@@ -117,10 +117,10 @@ export class Ecommerce extends Component{
  
            <div className="col-lg-4 col-md-6 mb-4">
              <div className="card h-100">
-               <a href="#"><img className="card-img-top" src="http://placehold.it/700x400" alt=""></img></a>
+               <Link to="#"><img className="card-img-top" src="http://placehold.it/700x400" alt=""></img></Link>
                <div className="card-body">
                  <h4 className="card-title">
-                   <a href="#">Item Three</a>
+                   <Link to="#">Item Three</Link>
                  </h4>
                  <h5>$24.99</h5>
                  <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
@@ -133,10 +133,10 @@ export class Ecommerce extends Component{
  
            <div className="col-lg-4 col-md-6 mb-4">
              <div className="card h-100">
-               <a href="#"><img className="card-img-top" src="http://placehold.it/700x400" alt=""></img></a>
+               <Link to="#"><img className="card-img-top" src="http://placehold.it/700x400" alt=""></img></Link>
                <div className="card-body">
                  <h4 className="card-title">
-                   <a href="#">Item Four</a>
+                   <Link to="#">Item Four</Link>
                  </h4>
                  <h5>$24.99</h5>
                  <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
@@ -149,10 +149,10 @@ export class Ecommerce extends Component{
  
            <div className="col-lg-4 col-md-6 mb-4">
              <div className="card h-100">
-               <a href="#"><img className="card-img-top" src="http://placehold.it/700x400" alt=""></img></a>
+               <Link to="#"><img className="card-img-top" src="http://placehold.it/700x400" alt=""></img></Link>
                <div className="card-body">
                  <h4 className="card-title">
-                   <a href="#">Item Five</a>
+                   <Link to="#">Item Five</Link>
                  </h4>
                  <h5>$24.99</h5>
                  <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
@@ -165,10 +165,10 @@ export class Ecommerce extends Component{
  
            <div className="col-lg-4 col-md-6 mb-4">
              <div className="card h-100">
-               <a href="#"><img className="card-img-top" src="http://placehold.it/700x400" alt=""></img></a>
+               <Link to="#"><img className="card-img-top" src="http://placehold.it/700x400" alt=""></img></Link>
                <div className="card-body">
                  <h4 className="card-title">
-                   <a href="#">Item Six</a>
+                   <Link to="#">Item Six</Link>
                  </h4>
                  <h5>$24.99</h5>
                  <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
